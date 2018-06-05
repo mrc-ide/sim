@@ -1,0 +1,9 @@
+Package: sim
+Title: Some Simulations
+Version: 0.1.0
+Description: Simulations for illustrating R and C++.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Author: Rich FitzJohn
+Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
