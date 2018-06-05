@@ -9,3 +9,11 @@ compute_pi_c <- function(n) {
     .Call('_sim_compute_pi_c', PACKAGE = 'sim', n)
 }
 
+my_sum1 <- function(x) {
+    .Call('_sim_my_sum1', PACKAGE = 'sim', x)
+}
+
+my_sum2 <- function(x) {
+    .Call('_sim_my_sum2', PACKAGE = 'sim', x)
+}
+

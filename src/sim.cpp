@@ -17,3 +17,27 @@ double compute_pi_c(int n) {
   }
   return 4 * (double) tot / n;
 }
+
+
+// [[Rcpp::export]]
+double my_sum1(Rcpp::NumericVector x) {
+  double tot = 0.0;
+  for (int i = 0; i < x.size(); ++i) {
+    tot += x[i];
+  }
+
+  return tot;
+}
+
+
+// [[Rcpp::export]]
+double my_sum2(std::vector<double> x) {
+  double tot = 0.0;
+  for (size_t i = 0; i < x.size(); ++i) {
+    tot += x[i];
+  }
+
+  return tot;
+}
+
+
