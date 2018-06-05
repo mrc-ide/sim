@@ -5,3 +5,7 @@ add2 <- function(a, b) {
     .Call('_sim_add2', PACKAGE = 'sim', a, b)
 }
 
+compute_pi_c <- function(n) {
+    .Call('_sim_compute_pi_c', PACKAGE = 'sim', n)
+}
+

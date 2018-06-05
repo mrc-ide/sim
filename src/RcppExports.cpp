@@ -17,12 +17,21 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-
-RcppExport SEXP _sim_add2_int(SEXP, SEXP);
+// compute_pi_c
+double compute_pi_c(int n);
+RcppExport SEXP _sim_compute_pi_c(SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_pi_c(n));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_sim_add2", (DL_FUNC) &_sim_add2, 2},
-    {"_sim_add2_int", (DL_FUNC) &_sim_add2_int, 2},
+    {"_sim_compute_pi_c", (DL_FUNC) &_sim_compute_pi_c, 1},
     {NULL, NULL, 0}
 };
 

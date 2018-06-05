@@ -1,4 +1,4 @@
-compute_pi <- function(n) {
+compute_pi_r <- function(n) {
   tot <- 0L
   for (i in seq_len(n)) {
     xy <- runif(2L)
