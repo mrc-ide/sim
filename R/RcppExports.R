@@ -17,3 +17,11 @@ my_sum2 <- function(x) {
     .Call('_sim_my_sum2', PACKAGE = 'sim', x)
 }
 
+my_cumulative_sum1 <- function(x) {
+    .Call('_sim_my_cumulative_sum1', PACKAGE = 'sim', x)
+}
+
+my_cumulative_sum2 <- function(x) {
+    .Call('_sim_my_cumulative_sum2', PACKAGE = 'sim', x)
+}
+

@@ -50,12 +50,36 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// my_cumulative_sum1
+Rcpp::NumericVector my_cumulative_sum1(Rcpp::NumericVector x);
+RcppExport SEXP _sim_my_cumulative_sum1(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_cumulative_sum1(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// my_cumulative_sum2
+std::vector<double> my_cumulative_sum2(std::vector<double> x);
+RcppExport SEXP _sim_my_cumulative_sum2(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<double> >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_cumulative_sum2(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_sim_add2", (DL_FUNC) &_sim_add2, 2},
     {"_sim_compute_pi_c", (DL_FUNC) &_sim_compute_pi_c, 1},
     {"_sim_my_sum1", (DL_FUNC) &_sim_my_sum1, 1},
     {"_sim_my_sum2", (DL_FUNC) &_sim_my_sum2, 1},
+    {"_sim_my_cumulative_sum1", (DL_FUNC) &_sim_my_cumulative_sum1, 1},
+    {"_sim_my_cumulative_sum2", (DL_FUNC) &_sim_my_cumulative_sum2, 1},
     {NULL, NULL, 0}
 };
 

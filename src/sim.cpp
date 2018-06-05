@@ -41,3 +41,24 @@ double my_sum2(std::vector<double> x) {
 }
 
 
+// [[Rcpp::export]]
+Rcpp::NumericVector my_cumulative_sum1(Rcpp::NumericVector x) {
+  x = Rcpp::clone(x);
+  double tot = 0;
+  for (int i = 0; i < x.size(); ++i) {
+    tot += x[i];
+    x[i] = tot;
+  }
+  return x;
+}
+
+
+// [[Rcpp::export]]
+std::vector<double> my_cumulative_sum2(std::vector<double> x) {
+  double tot = 0;
+  for (size_t i = 0; i < x.size(); ++i) {
+    tot += x[i];
+    x[i] = tot;
+  }
+  return x;
+}
